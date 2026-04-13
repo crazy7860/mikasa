@@ -41,7 +41,7 @@ function loginUser() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
 
-    if (username === 'passhu' && password === 'passhu') {
+    if (username === 'mikasawashroom' && password === 'anjalibathroom') {
         localStorage.setItem("isLoggedIn", "true");
 
         document.getElementById('loginPage').style.display = 'none';
