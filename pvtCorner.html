@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pvt Corner</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#000;
+            color:white;
+            min-height:100vh;
+            overflow-x:hidden;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+        }
+
+        /* back button */
+        .back-home{
+            position:fixed;
+            top:20px;
+            left:20px;
+            z-index:5;
+            text-decoration:none;
+            color:white;
+            background:rgba(255,255,255,.08);
+            padding:10px 16px;
+            border-radius:16px;
+            backdrop-filter:blur(8px);
+            font-size:14px;
+            transition:.3s;
+        }
+
+        .back-home:hover{
+            background:rgba(255,255,255,.14);
+        }
+
+        /* side dance videos */
+        .dance-video{
+            position:fixed;
+            top:50%;
+            transform:translateY(-50%);
+            width:180px;
+            height:280px;
+            object-fit:contain;
+            z-index:1;
+            pointer-events:none;
+        }
+
+        .left-video{
+            left:20px;
+        }
+
+        .right-video{
+            right:20px;
+        }
+
+        /* reel container */
+        .reel-container{
+            position:relative;
+            z-index:2;
+            margin-top:20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            animation:slideUp 1.2s ease;
+        }
+
+        @keyframes slideUp{
+            from{
+                transform:translateY(80px);
+                opacity:0;
+            }
+            to{
+                transform:translateY(0);
+                opacity:1;
+            }
+        }
+
+        /* proper vertical reel */
+        .insta-reel{
+            width:280px;
+            aspect-ratio:9 / 16;
+            border-radius:24px;
+            object-fit:cover;
+            background:black;
+            box-shadow:0 8px 30px rgba(0,0,0,.45);
+        }
+
+        /* tablet */
+        @media(max-width:768px){
+            .dance-video{
+                width:100px;
+                height:160px;
+            }
+
+            .insta-reel{
+                width:220px;
+                aspect-ratio:9 / 16;
+            }
+        }
+
+        /* mobile */
+        @media(max-width:480px){
+            .dance-video{
+                width:70px;
+                height:120px;
+            }
+
+            .left-video{
+                left:5px;
+            }
+
+            .right-video{
+                right:5px;
+            }
+
+            .insta-reel{
+                width:180px;
+                aspect-ratio:9 / 16;
+                border-radius:20px;
+            }
+
+            .back-home{
+                top:10px;
+                left:10px;
+                font-size:12px;
+                padding:8px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-home">⬅ Back Home</a>
+
+    <!-- background sound -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="music/pvt-bg.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- left right dance -->
+    <p>Sound on kar lo!</p>
+    <video class="dance-video left-video" autoplay muted loop playsinline>
+        <source src="dance-girl.mp4" type="video/mp4">
+    </video>
+
+    <video class="dance-video right-video" autoplay muted loop playsinline>
+        <source src="dance-girl.mp4" type="video/mp4">
+    </video>
+
+    <!-- vertical reel -->
+    <div class="reel-container">
+        <video class="insta-reel" controls autoplay muted loop playsinline onplay="pauseBg()" onpause="resumeBg()">
+            <source src="mikasa.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+
+        function pauseBg(){
+            bgMusic.pause();
+        }
+
+        function resumeBg(){
+            bgMusic.play();
+        }
+
+        window.onload = function(){
+            bgMusic.play().catch(() => {
+                document.body.addEventListener("click", function(){
+                    bgMusic.play();
+                }, { once:true });
+            });
+        }
+    </script>
+
+</body>
+</html>

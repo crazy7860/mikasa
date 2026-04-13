@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Kashish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="birthdaySong" loop>
+        <source src="music/birhday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginPage">
+        <div class="card">
+            <h1 style="text-align:center;margin-bottom:20px;">Welcome Kashish 💖</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="loginUser()">Login</button>
+        </div>
+    </section>
+
+    <!-- MAIN PAGE -->
+    <section id="mainPage" class="hidden">
+        <nav>
+            <h2>Happy Birthday Kashish</h2>
+            <div class="nav-links">
+                <a href="pvtCorner.html">Private-Corner</a>
+                <a href="comfortzone.html">Comfort-Zone</a>
+                <!-- <a href="#">Game Zone</a> -->
+                <a href="infinity.html">Your-Suprise</a>
+                <a href="gamezone.html">Game-Zone</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>🎂 Happy Birthday Kashish 🎂</h1>
+            <p>Your special surprise page </p>
+        </div>
+
+
+        <div class="anime-slider-wrapper">
+            <div class="anime-slider-track">
+                <img src="./scroll-img/img1.jpg">
+                <img src="./scroll-img/img2.jpg">
+                <img src="./scroll-img/img3.jpg">
+                <img src="./scroll-img/img7.jpg">
+                <img src="./scroll-img/img5.jpg">
+                <img src="./scroll-img/img1.jpg">
+                <img src="./scroll-img/img2.jpg">
+                <img src="./scroll-img/img3.jpg">
+                <img src="./scroll-img/img8.jpg">
+                <img src="./scroll-img/img6.jpg">
+            </div>
+        </div>
+
+        
+        <p id="temp">
+            Want to start your journey of surprises? Then click on the name of your loved ones
+        </p>
+
+        <div class="boxes">
+            <div class="box" onclick="openLetterImage('./latter-img/latter1.jpg')">Rohit</div>
+            <div class="box" onclick="openLetterImage('./latter-img/latter3.jpg')">Bella</div>
+            <div class="box" onclick="openLetterImage('./latter-img/latter2.jpg')">Infinity</div>
+            <div class="box" onclick="openLetterImage('./latter-img/latter4.jpg')">Parth</div>
+
+        </div>
+
+        <div id="letterModal">
+            <div class="modal-content">
+                <span onclick="closeLetterImage()" class="close-btn">✖</span>
+                <img id="letterImage" src="">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

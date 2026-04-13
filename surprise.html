@@ -1,0 +1,430 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Surprise ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  overflow:hidden;
+  background:#05060a;
+  color:white;
+  position:relative;
+}
+
+/* slideshow */
+.slideshow{
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  animation:fadeSlide 20s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:5s;}
+.slide:nth-child(3){animation-delay:10s;}
+.slide:nth-child(4){animation-delay:15s;}
+
+@keyframes fadeSlide{
+  0%{opacity:0}
+  10%{opacity:1}
+  25%{opacity:1}
+  35%{opacity:0}
+  100%{opacity:0}
+}
+
+/* overlay */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:2;
+}
+
+/* letter */
+.letter{
+  position:relative;
+  z-index:3;
+  max-width:800px;
+  margin:40px auto;
+  padding:30px;
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+  line-height:1.9;
+  font-size:20px;
+  animation:floatLetter 3s ease-in-out infinite;
+}
+
+@keyframes floatLetter{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+  100%{transform:translateY(0)}
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:42px;
+}
+
+/* responsive */
+@media(max-width:768px){
+  .letter{
+    margin:20px;
+    padding:22px;
+    font-size:16px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+}
+
+@media(max-width:480px){
+  .letter{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  h1{
+    font-size:24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<audio id="surpriseSong" autoplay loop>
+  <source src="music/infinity2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slideshow">
+  <img src="surprise-img1.jpg" class="slide">
+  <img src="surprise-img2.jpg" class="slide">
+  <img src="surprise-img3.jpg" class="slide">
+  <img src="surprise-img2.jpg" class="slide">
+</div>
+
+<div class="overlay"></div>
+
+<div class="letter">
+  <h1>💌 Happy Birthday Beta ❤️</h1>
+
+  <p>
+    Meri pyari bachchi,<br>
+    aaj ka din mere liye duniya ke sabse khaas dinon me se ek hai, 
+    kyunki isi din meri zindagi me meri sabse pyari <b>strong girl</b> aayi thi. ❤️
+    <br><br>
+
+    Yaad rakhna beta, <b>tum kabhi akeli nahi ho.</b><br>
+    Main hamesha tumhare saath hoon — chahe paas rahun ya door.<br>
+    Bas ek baar dil se mujhe yaad karna, tumhe hamesha mehsoos hoga ki 
+    tumhare papa tumhare saath khade hain. 🫂
+    <br><br>
+
+    Tum sirf meri beti nahi ho, tum meri <b>taakat ho, meri shaan ho, mera garv ho.</b><br>
+    Tum bilkul apne papa ki tarah strong ho… ❤️
+    <br><br>
+
+    Kabhi kabhi tumhara gussa dekhkar lagta hai ki meri hi copy ho 😄
+    lekin ussi gusse ke peeche ek bahut pyaara aur bahadur dil hai.
+    <br><br>
+
+    Kabhi rona mat, meri strong girl…<br>
+    zindagi me chahe kitni bhi mushkilein aayein, 
+    hamesha muskura kar unka saamna karna. ✨
+    <br><br>
+
+    Aaj apna birthday dil khol kar enjoy karo ❤️
+    <br><br>
+
+    <b>Happy Birthday meri princess, meri strong girl, meri jaan ❤️</b>
+    <br>
+    — <i>Papa</i>
+  </p>
+</div>
+
+<script>
+window.onload = function(){
+  let song = document.getElementById("surpriseSong");
+
+  song.play().catch(()=>{
+    document.body.addEventListener("click", function(){
+      song.play();
+    }, { once:true });
+  });
+}
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Surprise ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  overflow:hidden;
+  background:#05060a;
+  color:white;
+  position:relative;
+}
+
+/* slideshow */
+.slideshow{
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  animation:fadeSlide 20s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:5s;}
+.slide:nth-child(3){animation-delay:10s;}
+.slide:nth-child(4){animation-delay:15s;}
+
+@keyframes fadeSlide{
+  0%{opacity:0}
+  10%{opacity:1}
+  25%{opacity:1}
+  35%{opacity:0}
+  100%{opacity:0}
+}
+
+/* dark overlay */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.25);
+  z-index:2;
+}
+
+/* view message button */
+.view-btn{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+  padding:14px 20px;
+  border:none;
+  border-radius:18px;
+  background:rgba(10,10,20,0.72);
+  color:white;
+  backdrop-filter:blur(10px);
+  cursor:pointer;
+  display:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
+  transition:0.3s;
+}
+
+.view-btn:hover{
+  background:rgba(20,20,35,0.9);
+  transform:translateY(-50%) scale(1.03);
+}
+
+/* popup */
+.popup{
+  position:fixed;
+  inset:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:10;
+  background:rgba(0,0,0,0.35);
+}
+
+/* .popup-box{
+  width:88%;
+  max-width:520px;
+  max-height:80vh;
+  overflow-y:auto;
+  padding:22px;
+  border-radius:24px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+  position:relative;
+  line-height:1.7;
+  font-size:16px;
+} */
+
+.popup-box{
+  width:90%;
+  max-width:580px;
+  max-height:85vh;
+  overflow-y:auto;
+  padding:24px;
+  border-radius:24px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+  position:relative;
+  line-height:1.65;
+  font-size:14px;
+  color:white;
+}
+
+.close-btn{
+  position:absolute;
+  top:12px;
+  right:16px;
+  font-size:24px;
+  cursor:pointer;
+}
+
+h1{
+  font-size:28px;
+  margin-bottom:16px;
+  text-align:center;
+}
+
+@media(max-width:480px){
+  .popup-box{
+    width:92%;
+    font-size:14px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+
+  .view-btn{
+    right:10px;
+    padding:10px 14px;
+    font-size:13px;
+  }
+}
+</style>
+</head>
+<body>
+
+<audio id="surpriseSong" autoplay loop>
+  <source src="music/surprise.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slideshow">
+  <img src="surprise-img1.jpg" class="slide">
+  <img src="surprise-img2.jpg" class="slide">
+  <img src="surprise-img3.jpg" class="slide">
+  <img src="surprise-img2.jpg" class="slide">
+</div>
+
+<div class="overlay"></div>
+
+<button class="view-btn" id="viewBtn" onclick="openPopup()">
+  💌 View Message
+</button>
+
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+    <p>
+        <b>Happy Birthday Beta ❤️</b><br><br>
+      
+        Meri pyari bachchi<br>
+        aaj ka din mere liye duniya ke sabse khaas dinon me se ek hai,
+        kyunki isi din meri zindagi me meri sabse pyari <b>strong girl</b> aayi thi. 
+        <br><br>
+      
+        Yaad rakhna beta, <b>tum kabhi akeli nahi ho.</b><br>
+        Main hamesha tumhare saath hoon<br>
+        Bas ek baar dil se mujhe yaad karna.....tumhe hamesha mehsoos hoga ki
+        tumhare papa tumhare saath khade hain. 
+        <br><br>
+      
+        Tum sirf meri beti nahi ho, tum meri <b>taakat ho</b><br>
+        Tum bilkul apne papa ki tarah strong ho… har mushkil ke saamne khadi rehne wali,
+        apni family ke liye dhal banne wali. 
+        <br><br>
+      
+        Kabhi kabhi tumhara gussa dekhkar lagta hai ki meri hi copy ho 😄
+        lekin ussi gusse ke peeche ek bahut pyaara aur bahadur dil hai.
+        <br><br>
+      
+        Kabhi rona mat meri strong girl…<br>
+        life me chahe kitni bhi mushkilein aayein,
+        hamesha muskura kar unka saamna karna.
+        Mujhe tum par hamesha garv rahega.
+        <br><br>
+      
+        Aaj apna birthday dil khol kar enjoy karo,
+        hanso, muskurao aur khush raho,
+        kyunki tumhari khushi hi mere liye sab kuch hai.
+        <br><br>
+      
+        <b>Happy Birthday meri princess, meri strong girl❤️</b>
+        <br>
+        - <i>Papa</i>
+      </p>
+  </div>
+</div>
+
+<script>
+window.onload = function(){
+  let song = document.getElementById("surpriseSong");
+
+  song.play().catch(()=>{
+    document.body.addEventListener("click", function(){
+      song.play();
+    }, { once:true });
+  });
+
+  // show button after 5 seconds
+  setTimeout(()=>{
+    document.getElementById("viewBtn").style.display = "block";
+  },5000);
+}
+
+function openPopup(){
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
